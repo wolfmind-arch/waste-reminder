@@ -1,0 +1,18 @@
+{
+    "address": {
+        "postcode": "2861XC",
+        "house_number": "10"
+    },
+    "api": {
+        "base_url": "https://cyclusnv.nl",
+        "timeout_seconds": 10
+    },
+    "display": {
+        "type": "terminal"
+    },
+    "application": {
+        "refresh_interval_hours": 24,
+        "log_level": "INFO"
+    }
+}
+
