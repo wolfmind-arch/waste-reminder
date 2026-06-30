@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 def read_file(file_path):
     """
     Read a text file and return its contents.
@@ -6,12 +9,23 @@ def read_file(file_path):
         text = file.read()
     return text
 
+def parse_json(text):
+    config = json.loads(text)
+    return config
+
+
 
 def load_config():
-    # file_path = "../config.json"
-    text = read_file("../config.json")
-    print(text)
-    print("hej")
+    # file_path = Path("../config.json")
+    file_path = Path(__file__).parent.parent / "config.json"
+
+
+    text = read_file(file_path)
+
+    config = parse_json(text)
+    return config
+
+    
     """
     Load and validate the application configuration.
 
@@ -33,7 +47,8 @@ def load_config():
             If required configuration values are missing.
     """
 
-load_config()
+print(load_config())
+
 
 
 
